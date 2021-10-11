@@ -1,0 +1,42 @@
+:root {
+    --box-height: 50px;
+    --box-width: 50px;
+    --num-columns: 16;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--num-columns), 1fr);
+    max-width: 800px;
+    max-height: 800px;
+    border: 5px solid black;
+}
+
+.square {
+    height: var(--box-height);
+    width: var(--box-width);
+    display: inline-block;
+    background-color: rgb(221, 219, 219);
+}
+
+.reset {
+    border: none;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    margin: 20px 0;
+    background-color: aqua;
+}
